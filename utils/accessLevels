@@ -1,0 +1,115 @@
+const accessLevels = {
+  1: {
+    photoLimit: 10,
+    videoUpload: false,
+    videoChallenge: 'public',
+    createChallenge: 0,
+    customProfile: false
+  },
+  2: {
+    photoLimit: 15,
+    videoUpload: false,
+    videoChallenge: 'public',
+    createChallenge: 0,
+    customProfile: false
+  },
+  3: {
+    photoLimit: 25,
+    videoUpload: true,
+    videoChallenge: 'public',
+    createChallenge: 2,
+    customProfile: false
+  },
+  4: {
+    photoLimit: Infinity,
+    videoUpload: true,
+    videoChallenge: 'public',
+    createChallenge: 3,
+    customProfile: false
+  },
+  5: {
+    photoLimit: Infinity,
+    videoUpload: true,
+    videoChallenge: 'public',
+    createChallenge: 5,
+    customProfile: true
+  }
+};
+
+export function hasAccessToVideoChallengeCategory(userLevel, category) {
+  const categoryObject = videoChallengeCategory.find(obj => obj.category === category);
+  if (categoryObject) {
+    const requiredAccessLevels = categoryObject.accessLevels;
+    for (const level of requiredAccessLevels) {
+      if (level <= userLevel) {
+        return true;
+      }
+    }
+  }
+  return false;
+}
+
+export function canUploadPhotos(userLevel) {
+  return accessLevels[userLevel].photoLimit !== undefined;
+}
+
+export function canUploadVideos(userLevel) {
+  return accessLevels[userLevel].videoUpload !== undefined;
+}
+
+export function canCreateChallenges(userLevel) {
+  return accessLevels[userLevel].createChallenge !== undefined;
+}
+
+export function canViewVideoChallenges(userLevel) {
+  const videoChallenge = accessLevels[userLevel].videoChallenge;
+  return videoChallenge === 'public' || videoChallenge === 'private';
+}
+
+export function canVoteOnChallenges(userLevel) {
+  return accessLevels[userLevel].createChallenge !== undefined;
+}
+
+export function canCommentOnChallenges(userLevel) {
+  return accessLevels[userLevel].createChallenge !== undefined;
+}
+
+export function canShareChallenges(userLevel) {
+  return accessLevels[userLevel].createChallenge !== undefined;
+}
+
+export function canHaveCustomProfile(userLevel) {
+  return accessLevels[userLevel].customProfile !== undefined;
+}
+
+
+const videoChallengeCategory = [
+  { category: 'Beginner', accessLevels: [1, 2, 3, 4, 5] },
+  { category: 'Adventure', accessLevels: [2, 3, 4, 5] },
+  { category: 'Dare', accessLevels: [2, 3, 4, 5] },
+  { category: 'Family', accessLevels: [3, 4, 5] },
+  { category: 'General', accessLevels: [4, 5] },
+  { category: 'Group', accessLevels: [4, 5] },
+  { category: 'Health', accessLevels: [5] },
+  { category: 'Skills', accessLevels: [5] },
+  { category: 'Strategy', accessLevels: [5] }
+];
+
+// Example usage:
+const userLevel = 1;
+// console.log(hasAccessToVideoChallengeCategory(userLevel, 'Beginner')); // Output: true
+// console.log(hasAccessToVideoChallengeCategory(userLevel, 'Adventure')); // Output: false
+// console.log(hasAccessToVideoChallengeCategory(userLevel, 'Health')); // Output: false
+// console.log(hasAccessToVideoChallengeCategory(userLevel, 'Skills')); // Output: false
+// console.log(hasAccessToVideoChallengeCategory(userLevel, 'Strategy')); // Output: false
+// console.log(hasAccessToVideoChallengeCategory(userLevel, 'General')); // Output: false
+// console.log(hasAccessToVideoChallengeCategory(userLevel, 'NonexistentCategory')); // Output: false
+
+// console.log(canUploadPhotos(userLevel)); // Output: true
+// console.log(canUploadVideos(userLevel)); // Output: true
+// console.log(canCreateChallenges(userLevel)); // Output: true
+// console.log(canViewVideoChallenges(userLevel)); // Output: true
+// console.log(canVoteOnChallenges(userLevel)); // Output: true
+// console.log(canCommentOnChallenges(userLevel)); // Output: true
+// console.log(canShareChallenges(userLevel)); // Output: true
+// console.log(canHaveCustomProfile(userLevel)); // Output: false

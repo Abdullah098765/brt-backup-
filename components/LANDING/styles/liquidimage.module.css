@@ -1,0 +1,165 @@
+@import url("https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@font-face {
+  font-family: "sofia-pro";
+  src: url("/fonts/sofiapro-light.otf");
+  font-weight: 400;
+  font-style: normal;
+}
+.container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+@media screen and (max-width: 586px) {
+.container {
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-bottom: -550px;
+}
+}
+
+.box {
+  width: 75vmin;
+  height: 60vmin;
+  /* border: 1px dashed rgba(255, 255, 255, 0.4); */
+  position: relative;
+}
+.box ::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  border-radius: 50%;
+  /* border: 1px dashed rgba(255, 255, 255, 0.4); */
+  transform: scale(1.42);
+}
+.spin_container {
+  width: 100%;
+  height: 100%;
+  animation: spin 12s ease-in-out infinite alternate;
+  position: relative;
+}
+@media screen and (max-width: 586px) {
+.spin_container {
+  margin-top: -240px !important;
+
+  animation: spin 12s ease-in-out infinite alternate;
+  position: relative;
+}
+}
+.shape {
+  width: 100%;
+  height: 100%;
+  transition: border-radius 1s ease-out;
+  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  animation: morph 8s ease-in-out infinite both alternate;
+  position: absolute;
+  overflow: hidden;
+  z-index: 5;
+}
+
+.bd {
+  width: 142%;
+  height: 142%;
+  position: absolute;
+  left: -21%;
+  top: -21%;
+  background: url(https://dqzkou3id10fe.cloudfront.net/public/backgrounds/about-hero.jpg);
+  background-size: 100%;
+  background-position: center center;
+  display: flex;
+  color: #003;
+  font-size: 5vw;
+  font-weight: bold;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  text-transform: uppercase;
+  animation: spin 12s ease-in-out infinite alternate-reverse;
+  opacity: 1;
+  z-index: 2;
+}
+
+@keyframes morph {
+  0% {
+    border-radius: 40% 60% 60% 40% / 60% 30% 70% 40%;
+  }
+  100% {
+    border-radius: 40% 60%;
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(1turn);
+  }
+}
+.sofia_pro {
+  font-family: "sofia-pro", sans-serif;
+}
+.gradient_text_bragtime {
+  font-size: 72px;
+  font-weight: 800;
+  font-family: "Golos Text", sans-serif;
+  background: linear-gradient(90deg, #8d65e9 0%, #6bcd94 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+@media screen and (max-width: 586px) {
+.gradient_text_bragtime {
+  font-size: 60px;
+  font-weight: 800;
+  font-family: "Golos Text", sans-serif;
+  background: linear-gradient(90deg, #8d65e9 0%, #6bcd94 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+}
+.gradient_text_place {
+  font-size: 72px;
+  font-weight: 800;
+  font-family: "Golos Text", sans-serif;
+  background: linear-gradient(90deg, #e2ddec 0%, #af65a5 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+@media screen and (max-width: 586px) {
+.gradient_text_place {
+  margin-top: 10px;
+  font-size: 50px;
+  font-weight: 800;
+  font-family: "Golos Text", sans-serif;
+  background: linear-gradient(90deg, #e2ddec 0%, #af65a5 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+}
+.connect_text {
+  font-size: 46px;
+  font-weight: 500;
+  font-family: "Golos Text", sans-serif;
+  color: #485666;
+}
+@keyframes flip {
+  0% {
+    transform: perspective(800px) rotateY(0);
+  }
+  100% {
+    transform: perspective(800px) rotateY(180deg);
+  }
+}
+
+/* Apply the flip animation to the slide */
+.flip_slide {
+  animation: flip 0.5s ease-in-out both;
+  transform-style: preserve-3d;
+}

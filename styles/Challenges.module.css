@@ -1,0 +1,166 @@
+.customPlayBtn {
+      width: 100px;
+      height: 100px;
+      background: url(/assets/img/custom-play.png);
+      border-radius: 50%;
+    
+      background-position: center;
+      background-size: cover;
+    }
+    
+    .playBtn {
+      width: 100px;
+      height: 100px;
+      background: radial-gradient(
+        rgba(255, 0, 128, 0.8) 60%,
+        rgba(255, 255, 255, 1) 62%
+      );
+      border-radius: 50%;
+      box-shadow: 0px 0px 25px 3px rgba(255, 0, 128, 0.8);
+    }
+    
+    .challengeBg {
+      background-repeat: no-repeat;
+      background-position: center;
+      position: fixed;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+    }
+    
+    .funBg {
+      background: -webkit-gradient(
+    linear,
+    right top,
+    left top,
+    from(#8942a8),
+    to(#ba382f)
+    );
+    background: linear-gradient(to left, #8942a8, #ba382f) !important;
+    overflow: hidden;
+    } 
+    
+    .challengeModalBg {
+      background: rgb(11, 16, 93);
+      background: linear-gradient(
+        29deg,
+        rgba(11, 16, 93, 1) 0%,
+        rgba(134, 20, 157, 1) 46%,
+        rgba(71, 5, 87, 1) 100%
+      ) !important;
+      padding: 50px !important;
+      border-radius: 20px;
+    }
+    
+    
+    .challengeCardBg {
+    background: rgb(107,43,241);
+    background: linear-gradient(72deg, rgba(107,43,241,1) 0%, rgba(57,24,125,1) 34%, rgba(17,3,46,1) 100%);
+    }
+    
+    .imageBgParticipant {
+      left: 0%;
+      right: 0%;
+      top: 0%;
+      bottom: 0%;
+      z-index: -1;
+      background: #64bbee2d;
+      mix-blend-mode: soft-light;
+      filter: blur(0.5px);
+      border-radius: 51px;
+      max-height: 376px !important;
+      max-width: 376px !important;
+      margin-bottom: 20px;
+      mix-blend-mode: soft-light;
+      filter: blur(0.5px);
+      border-radius: 51px;
+      height: 100% !important;
+      margin-bottom: 20px;
+    }
+    
+    
+    .challengerBg {
+      background: url(/images/challenger.gif);
+      background-position: center;
+      background-size: cover;
+    }
+    
+    .CourseRowWrapper {
+      position: relative;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+      -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      max-width: 284px;
+      height: -webkit-fit-content;
+      height: -moz-fit-content;
+      height: fit-content;
+      padding: 10px;
+      -webkit-transition: 0.3s ease-in-out;
+      transition: 0.3s ease-in-out;
+      border-radius: 10px;
+    }
+    
+    .CourseRowWrapper:hover {
+      background: rgba(68, 66, 178, 0.1);
+      box-shadow: inset 0px 0px 0px 0.5px rgba(68, 66, 178, 0.2);
+    }
+    
+    @media (prefers-color-scheme: dark) {
+      .CourseRowWrapper:hover {
+        background: rgba(255, 255, 255, 0.1);
+        box-shadow: inset 0px 0px 0px 0.5px rgba(255, 255, 255, 0.2);
+      }
+    }
+    
+    .CourseRowWrapper:hover .hover {
+      background: #2fb5fc;
+      -webkit-transition: 0.3s ease-in-out;
+      transition: 0.3s ease-in-out;
+    }
+    
+    .CourseRowLogoWrapper {
+      position: absolute;
+      width: 32px;
+      height: 32px;
+      background: rgba(0, 0, 0, 0.2);
+      border-radius: 50px;
+    }
+    .letsgobtn {
+      margin-top: 80px;
+      margin-bottom: 80px;
+      padding: 10px 40px;
+      border-radius: 90px;
+      background: linear-gradient(180deg, #b133db 0%, #57198a 100%);
+      box-shadow: 0px 2.0795845985412598px 20.79584503173828px 0px
+        rgba(0, 0, 0, 0.2);
+      box-shadow: 0px 8.318338394165039px 10.39792251586914px 0px
+        rgba(0, 0, 0, 0.12);
+      box-shadow: 0px 4.1591691970825195px 8.318338394165039px 0px
+        rgba(0, 0, 0, 0.14);
+    }
+    .gradientColorText{
+      background: -webkit-linear-gradient(#eee, rgba(255, 191, 245, 1));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: 600;
+    }
+    .stepbgcolor{
+      /* background: linear-gradient(264.37deg, #C7FFD0 -48.37%, #35FF50 -48.35%, #5D35FF 171.28%); */
+    border: 1px linear-gradient(264.37deg, #C7FFD0 -48.37%, #35FF50 -48.35%, #5D35FF 171.28%);;
+    border-radius: 90px;
+    border-image-source: linear-gradient(264.37deg, #C7FFD0 -48.37%, #35FF50 -48.35%, #5D35FF 171.28%);
+    
+    
+    
+    }
+    .continueBtn{
+      background: linear-gradient(124.38deg, #6F133F -232.39%, #332668 243.87%),
+    linear-gradient(0deg, #FFFFFF, #FFFFFF);
+    
+    }

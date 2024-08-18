@@ -1,0 +1,43 @@
+ .engraved2 {
+
+            color: #bdbaba;
+            background: #251d14;
+            -webkit-background-clip: text;
+            text-shadow: 1px 3px 3px 
+                rgba(109, 109, 109, 0.3);
+ }
+
+  .engraved3 {
+
+            color: #4c052b;
+             background: radial-gradient( 35.45% 84.04% at 37.53% 46.44%, #4c052b 0%, #1e1e32 100% );
+            -webkit-background-clip: text;
+            text-shadow: 1px 3px 3px 
+                rgba(255, 255, 255, 0.3);
+ }
+
+ .powder {
+  background: linear-gradient( 180deg, rgb(129 154 255 / 79%) 0%, rgb(150 152 160 / 75%) 100% ) !important;
+}
+
+
+
+.globalBtnMd{
+  @apply box-border shadow-[0px_1px_3px_rgba(0,0,0,0.1),0px_20px_40px_rgba(23,0,102,0.2)] flex w-[120px] text-center cursor-pointer p-1 rounded-[20px]  hover:shadow-[0px_10px_30px_rgba(0,0,0,0.1),0px_30px_60px_rgba(23,0,102,0.3)] hover:-translate-y-0.5;
+  background-color: #08ddc1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+}
+.globalBtnMd,
+.globalBtnMd * {
+  @apply transition-[1s] duration-[cubic-bezier(0.075,0.82,0.165,1)];
+  -webkit-transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.globalBtnMd:focus {
+  outline: none;
+}
+.globalBtnMd:hover {
+  -webkit-transform: translateY(-2px);
+  -ms-transform: translateY(-2px);
+}
